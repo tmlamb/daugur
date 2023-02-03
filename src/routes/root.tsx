@@ -2,6 +2,7 @@ import { Listbox } from "@headlessui/react";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "preact/hooks";
 import { Link, Outlet } from "react-router-dom";
+import { dogStore } from '../hooks/dog-store'
 import useDogStore, { Dog } from "../hooks/use-dog-store";
 import { fetchAge } from "../services/agify-api";
 import { fetchGender } from "../services/genderize-api";
@@ -9,7 +10,7 @@ import { fetchCountryId } from "../services/nationalize-api";
 
 export default function Root() {
 
-  const dogs = useDogStore(state => state.dogs)
+  const dogs = dogStore.useState(state => state.dogs)
 
   const [selectedDog, setSelectedDog] = useState<Dog>()
 
