@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import DogBreedPicker from "../components/dog-breed-picker";
+import { addDog } from '../hooks/dog-store'
 import useDogStore, { Dog } from "../hooks/use-dog-store";
 
 export default function DogForm() {
@@ -19,7 +20,8 @@ export default function DogForm() {
 
   const navigate = useNavigate();
 
-  const addDog = useDogStore(state => state.addDog);
+  // const addDog = useDogStore(state => state.addDog);
+  
 
   const onSubmit = handleSubmit(dog => {
     addDog(dog);

@@ -5,11 +5,11 @@ specifiers:
   '@headlessui/react': ^1.7.8
   '@preact/preset-vite': ^2.4.0
   '@tanstack/react-query': ^4.23.0
-  atomic-fns: ^1.1.1
   autoprefixer: ^10.4.13
   immer: ^9.0.18
   postcss: ^8.4.21
   preact: ^10.11.3
+  pullstate: ^1.25.0
   react: npm:@preact/compat
   react-dom: npm:@preact/compat
   react-hook-form: ^7.42.1
@@ -24,11 +24,11 @@ dependencies:
   '@babel/core': 7.20.12
   '@headlessui/react': 1.7.8_ive3jjn476xyi3ikfsqwmh5x74
   '@tanstack/react-query': 4.23.0_ive3jjn476xyi3ikfsqwmh5x74
-  atomic-fns: 1.1.2
   autoprefixer: 10.4.13_postcss@8.4.21
   immer: 9.0.19
   postcss: 8.4.21
   preact: 10.11.3
+  pullstate: 1.25.0_@preact+compat@17.1.2
   react: /@preact/compat/17.1.2_preact@10.11.3
   react-dom: /@preact/compat/17.1.2_preact@10.11.3
   react-hook-form: 7.42.1_@preact+compat@17.1.2
@@ -667,10 +667,6 @@ packages:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
     dev: false
 
-  /atomic-fns/1.1.2:
-    resolution: {integrity: sha512-ZKVYT5AcafqATxztxEr8Ol2YC8Le9NO2b6fOi8fOQNfnk8niXKB1U3E2LKQGzo11SIQuPzuWDWYfgvkJZH5OXg==}
-    dev: false
-
   /autoprefixer/10.4.13_postcss@8.4.21:
     resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -850,6 +846,10 @@ packages:
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: true
+
+  /fast-deep-equal/3.1.3:
+    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    dev: false
 
   /fast-glob/3.2.12:
     resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
@@ -1110,6 +1110,16 @@ packages:
 
   /preact/10.11.3:
     resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
+
+  /pullstate/1.25.0_@preact+compat@17.1.2:
+    resolution: {integrity: sha512-6SJMhK5EbDhrbyocMQOZKY3QKC5RfLcdtYD1y7wioF5dseVsdi3vmeHG3TwW4SrhQQP/WKyU/Np2X6UOhq1F6g==}
+    peerDependencies:
+      react: ^16.12.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      fast-deep-equal: 3.1.3
+      immer: 9.0.19
+      react: /@preact/compat/17.1.2_preact@10.11.3
+    dev: false
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}

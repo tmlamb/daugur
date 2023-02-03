@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "pnpm": ">= 7.26.0",
+    "pnpm": ">= 7.0.0",
     "npm": "please.use.pnpm",
     "yarn": "please.use.pnpm"
   },
@@ -21,6 +21,7 @@
     "immer": "^9.0.18",
     "postcss": "^8.4.21",
     "preact": "^10.11.3",
+    "pullstate": "^1.25.0",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-hook-form": "^7.42.1",
